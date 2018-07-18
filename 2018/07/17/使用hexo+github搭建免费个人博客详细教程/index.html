@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/13034693-3adf2c8195e7659f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/13034693-d8cc930759d6bc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/13034693-264c1c7fc12e3453.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-07-17T09:15:59.920Z">
+<meta property="og:updated_time" content="2018-07-18T09:03:35.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github搭建免费个人博客详细教程">
 <meta name="twitter:description" content="使用github pages服务搭建博客的好处有：  全是静态文件，访问速度快； 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台； 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的； 数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行； 博客内容可以轻松打包、转移、发布到其它平台； 等等；">
@@ -199,6 +199,33 @@
         
       </header>
     
+    <!-- 目录内容 -->
+    
+      <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+      <span class="btn-bg"></span>
+      <span class="btn-text">文章导航</span>
+      </p>
+      <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-准备工作"><span class="toc-number">1.</span> <span class="toc-text">1.1. 准备工作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建github博客"><span class="toc-number"></span> <span class="toc-text">搭建github博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-创建仓库"><span class="toc-number">1.</span> <span class="toc-text">2.1. 创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-绑定域名"><span class="toc-number">2.</span> <span class="toc-text">2.2. 绑定域名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置SSH-key"><span class="toc-number"></span> <span class="toc-text">配置SSH key</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-测试是否成功"><span class="toc-number">1.</span> <span class="toc-text">3.1. 测试是否成功</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用hexo写博客"><span class="toc-number"></span> <span class="toc-text">使用hexo写博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-hexo简介"><span class="toc-number">1.</span> <span class="toc-text">4.1. hexo简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-原理"><span class="toc-number">2.</span> <span class="toc-text">4.2. 原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-注意事项"><span class="toc-number">3.</span> <span class="toc-text">4.3. 注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-安装"><span class="toc-number">4.</span> <span class="toc-text">4.4. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-初始化"><span class="toc-number">5.</span> <span class="toc-text">4.5. 初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-修改主题"><span class="toc-number">6.</span> <span class="toc-text">4.6. 修改主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-上传之前"><span class="toc-number">7.</span> <span class="toc-text">4.7. 上传之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-8-上传到github"><span class="toc-number">8.</span> <span class="toc-text">4.8. 上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-9-保留CNAME、README-md等文件"><span class="toc-number">9.</span> <span class="toc-text">4.9. 保留CNAME、README.md等文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-10-常用hexo命令"><span class="toc-number">10.</span> <span class="toc-text">4.10. 常用hexo命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-11-config-yml"><span class="toc-number">11.</span> <span class="toc-text">4.11. _config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-12-写博客"><span class="toc-number">12.</span> <span class="toc-text">4.12. 写博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-12-1-写博客工具"><span class="toc-number">12.1.</span> <span class="toc-text">4.12.1. 写博客工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-12-2-如何让博文列表不显示全部内容"><span class="toc-number">12.2.</span> <span class="toc-text">4.12.2. 如何让博文列表不显示全部内容</span></a></li></ol></li></ol>
+      </div>
+      <script type="text/javascript">
+      function showToc(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:block");
+          show_toc_btn.setAttribute("style","display:none");
+      };
+      function showBtn(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:none");
+          show_toc_btn.setAttribute("style","display:block");
+      };
+      </script>
+      
+    <!-- 目录内容结束 -->
     
       <span class="archive-article-date">
       阅读量 <span id="busuanzi_value_page_pv"></span>
